@@ -1,0 +1,8 @@
+torch~=2.5.1+cu121
+pandas~=2.2.3
+numpy~=2.1.2
+matplotlib~=3.10.1
+transformers~=4.51.3
+scikit-learn~=1.6.1
+tqdm~=4.67.1
+captum~=0.8.0

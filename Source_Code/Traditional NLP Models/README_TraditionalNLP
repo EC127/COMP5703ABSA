@@ -1,0 +1,34 @@
+# Usage Instructions
+
+This project demonstrates aspect-based sentiment classification using a traditional NLP pipeline (tokenization + TF-IDF + classical ML) combined with LIME explainability. Simply run the notebook cells in order to execute the full workflow:
+
+1. **Data Loading & Preprocessing**
+
+   * Read restaurant and laptop review CSVs from `data/`.
+   * Keep `Sentence`, `Aspect Term`, and `polarity`; drop missing values.
+
+2. **Feature Extraction**
+
+   * Custom NLTK tokenizer: lowercase, filter non-letters, lemmatize.
+   * TF-IDF vectorization with up to 5000 features.
+
+3. **Model Training & Evaluation**
+
+   * Train three classifiers per domain:
+
+     * Linear SVM (with `predict_proba` enabled)
+     * Decision Tree
+     * Random Forest
+   * Use an 80/20 train-test split and output classification reports.
+
+4. **LIME Explanations**
+
+   * Wrap TF-IDF and each model into an `sklearn.pipeline`.
+   * Use `LimeTextExplainer` to generate local explanations for all sentiment labels.
+   * Loop through `exp.available_labels()` to display or save each label’s explanation.
+
+5. **Save Explanation Outputs (Optional)**
+
+   * Plot top features for each label as horizontal bar charts.
+
+That's it—running through the notebook executes the end-to-end pipeline from raw data to interpretable results.

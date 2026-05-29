@@ -1,0 +1,8 @@
+torch~=2.5.1+cu121
+pandas~=2.2.3
+numpy~=2.1.2
+matplotlib~=3.10.1
+scikit-learn~=1.6.1
+nltk~=3.8.1
+lime~=0.2.0
+captum~=0.8.0
